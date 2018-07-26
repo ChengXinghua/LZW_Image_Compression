@@ -1,2 +1,2 @@
-# LZW_Image_Compression
-This is an assignment for CMPE 457. The purpose of this assignment was to compress and restore an image. This was achieved by implementing LZW image compression with predictive encoding to both encode and decode the image. 
+# LZW Image Compression
+This is an assignment for CMPE 457. The purpose of this assignment was to compress and restore an image. This was achieved by implementing LZW image compression with predictive encoding to both encode and decode the image. You can find the main program, the images used in the program, and the report on performance of the encoding in this repository. Credit for this assignment and base code is to James Stewart, http://watkins.cs.queensu.ca/~jstewart/457/.
