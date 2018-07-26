@@ -1,0 +1,44 @@
+Sam Codrington 10096923 sam.codrington@queensu.ca
+Sam Ruscica    10148585 14stsr@queensu.ca
+
+
+
+We've set up our code so predictive encoding can be done separately from LZW 
+encoding, and attached two images to show the difference between using our LZW 
+encoding vs our LZW+predictive encoding.
+
+To run our code without predictive encoding, comment lines
+77-85
+102-109
+270-277
+285-292
+
+
+Here are our results with predictive encoding
++-------------------+-------------------+-------------------+---------------+
+|filename           |compression time   |compression ratio  |zipped ratio   |
++-------------------+-------------------+-------------------+---------------+
+| cortex.pnm        | 4.60 seconds      |5.56               | 4.6           |
++-------------------+-------------------+-------------------+---------------+
+| barbara.pnm       | 2.02 seconds      |1.55               | 1.3           |
++-------------------+-------------------+-------------------+---------------+
+| mandrill.pnm      | 2.04 seconds      |1.66               | 1.3           |
++-------------------+-------------------+-------------------+---------------+
+| crest.pnm         | 12.37 seconds     |18.45              | 21.7          |
++-------------------+-------------------+-------------------+---------------+
+| noise.pnm         | 2.52 seconds      |*0.76              | 1.0           |
++-------------------+-------------------+-------------------+---------------+
+* running our algorithm on noise actually elongates the file, as there are no 
+repeating patterns for the code to compress.
+
+
+Running our code without predictive encoding results in lower compression 
+ratios, but faster times and accurate image reproduction
+
+ie. for cortex.pnm without predictive encoding
+
++-------------------+-------------------+-------------------+---------------+
+|filename           |compression time   |compression ratio  |zipped ratio   |
++-------------------+-------------------+-------------------+---------------+
+| cortex.pnm        | 3.56 seconds      |4.01               | 4.6           |
++-------------------+-------------------+-------------------+---------------+
